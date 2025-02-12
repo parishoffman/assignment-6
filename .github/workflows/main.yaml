@@ -23,6 +23,9 @@ jobs:
             -e MYSQL_DATABASE=db \
             -e MYSQL_ROOT_PASSWORD=12345678 \
             mysql:latest
+            
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
 
       - name: Build with Gradle
         run: ./gradlew build
