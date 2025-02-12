@@ -11,11 +11,11 @@ jobs:
         java-version: 23
     - name: docker 
       run: |
-      docker run -d --rm \
-      -p 3306:3306 \
-      -e MYSQL_DATABASE=db \
-      -e MYSQL_ROOT_PASSWORD=12345678 \
-      mysql:latest
+        docker run -d --rm \
+        -p 3306:3306 \
+        -e MYSQL_DATABASE=db \
+        -e MYSQL_ROOT_PASSWORD=12345678 \
+        mysql:latest
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run tests
